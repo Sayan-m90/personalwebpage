@@ -7,7 +7,35 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        
+        .youtube-links-container {
+          display: flex; /* Enables flexbox for side-by-side alignment */
+          justify-content: center; /* Centers the links horizontally */
+          align-items: center; /* Aligns links vertically in the middle */
+          gap: 20px; /* Adds space between the links */
+          padding: 20px; /* Adds some padding around the container */
+          background-color: #f9f9f9; /* Light background for the container */
+          border: 1px solid #ddd; /* A subtle border */
+          border-radius: 8px; /* Rounded corners */
+          flex-wrap: wrap; /* Allows links to wrap to the next line on very small screens */
+        }
+
+        .youtube-links-container a {
+          /* Style for the individual links */
+          text-decoration: none; /* Removes underline from links */
+          color: #007bff; /* Standard blue link color */
+          font-weight: bold; /* Makes the text bold */
+          padding: 10px 15px; /* Padding inside each link "button" */
+          border: 1px solid #007bff; /* Border for a button-like appearance */
+          border-radius: 5px; /* Rounded corners for the link "button" */
+          background-color: #e7f3ff; /* Light blue background */
+          transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+          white-space: nowrap; /* Prevents text from wrapping within the link */
+        }
+
+        .youtube-links-container a:hover {
+          background-color: #007bff; /* Darker blue background on hover */
+          color: white; /* White text on hover */
+        }
         .mr-1 {
             max-width: 25px;
         }
@@ -218,25 +246,12 @@
 
         <!-- About Me / Profile Section -->
         <section id="about" class="mb-12">
-            <h2 class="section-heading">About Me</h2>
             <div class="card text-center">
                 <img class="profile-image-placeholder" src="webimg/PBR_9518.jpg">
                     
                 </img>
             </div>
-        </section>
 
-            <div class="card">
-                <h3 class="job-title">SENIOR RESEARCH FELLOW</h3>
-                <p class="company-name">Indian Institute of Technology Kharagpur</p>
-                <p class="date-location">Jul. 2014-Jun. 2015 | Kharagpur, India</p>
-                <ul class="description-list">
-                    <li>Worked on Machine Learning on Volumetric Data, specifically with oncologists to automatically detect pelvic bones from CT Scan images.</li>
-                    <li>The developed software is actively used in a renowned hospital in India for colon cancer treatment planning.</li>
-                </ul>
-            </div>
-
-        </section>
 
         <!-- Education Section -->
         <section id="education" class="mb-12">
@@ -248,9 +263,36 @@
                 <p class="education-school">The Ohio State University</p>
                 <p class="date-location">Aug. 2015-May. 2020 | Columbus, USA</p>
                 <p class="text-gray-700">
-                    Research Summary: Developed topological tools for data science, genomics, computer vision, and machine learning, with a focus on deep and shallow learning applications in protein characterization, image classification, and gene expression analysis.
-                </p>
+                    <b>Research Summary:</b> Developed topological tools for data science, genomics, computer vision, and machine learning, with a focus on deep and shallow learning applications in protein characterization, image classification, and gene expression analysis.
+
+                    I also worked on Representative Persistent d-cycles Cycles: Addresses the problem of computing representative cycles for persistent homology intervals. It proposes an efficient polynomial-time algorithm for computing persistent 1-cycles and an algorithm for d-cycles on weak (d+1)-pseudomanifolds. Custom software was designed for these computations, and experiments on 3D point clouds, mineral structures, images, and medical data demonstrate their effectiveness.
+                    <b><u><a href="https://etd.ohiolink.edu/acprod/odb_etd/etd/r/1501/10?clear=10&p10_accession_num=osu1591811236244813" target="_blank"> My thesis</a></u></b> explores the utility of topological data analysis (TDA), particularly persistent homology, in various data science fields such as computational biology, graphics, and machine learning. Key contributions include:
+                    <ul class="description-list">
+                        <li>Image Classification: A new method using persistent homology to extract machine learning features for image classification, demonstrating improved classification accuracy by incorporating topological features into supervised learning models.</li>
+
+                        <li>Protein Analysis and Classification: A topology-based, fast, scalable, and parameter-free technique for protein analysis. It uses simplicial collapse on a simplicial complex of protein atoms and bonds to compute persistent homology as a signature for protein molecules, showing significant time and memory improvements over similar approaches. This signature is used to train a protein domain classifier, achieving substantial accuracy improvements.</li>
+
+                        <li>Bio-science and Technology Applications: Further investigates the use of persistent cycles to understand gene-expression levels in organisms affected by infections or antigens. By curating cohort lists and gene expressions, the method improves both deep and shallow learning classifications and shows an unsupervised inclination towards phenotype labels.</li>
+                    
+                                    </p>
+                        <div class="youtube-links-container">
+                          <a href="https://youtu.be/hq4DYse2c-Y?si=SRJev1k_LDkTMlwV" target="_blank" rel="noopener noreferrer"><img src="webimg/rs0.png"></a>
+                          <a href="https://www.youtube.com/watch?v=kP7d6h5N0Ps" target="_blank" rel="noopener noreferrer"><img src="webimg/rs1.png"></a>
+                          <a href="https://youtu.be/Lf1Ud2GHKWo?si=GtY5Datd6zIWeMNT" target="_blank" rel="noopener noreferrer"><img src="webimg/rs2.png"></a>
+                          <a href="https://youtu.be/yfcf9UWgdTo" target="_blank" rel="noopener noreferrer"><img src="webimg/rs3.png"></a>
+                        </div>
             </div>
+
+            <div class="card">
+                <h3 class="job-title">SENIOR RESEARCH FELLOW</h3>
+                <p class="company-name">Indian Institute of Technology Kharagpur</p>
+                <p class="date-location">Jul. 2014-Jun. 2015 | Kharagpur, India</p>
+                <ul class="description-list">
+                    <li>Worked on Machine Learning on Volumetric Data, specifically with oncologists to automatically detect pelvic bones from CT Scan images.</li>
+                    <li>The developed software is actively used in a renowned hospital in India for colon cancer treatment planning.</li>
+                </ul>
+            </div>
+
 
             <div class="card">
                 <p class="education-degree">M.E. In Computer Sc. and Engg.: 89.16% Valedictorian</p>
